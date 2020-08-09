@@ -55,7 +55,7 @@ public class AppControllerTest {
 
     @Test
     @DisplayName("Test get main page")
-    void testMainPager() throws Exception {
+    void testMainPage() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(view().name("index"));
     }
