@@ -6,7 +6,7 @@
 
     <groupId>dev.alnat.httpstatusmocker</groupId>
     <artifactId>HTTPStatusMocker</artifactId>
-    <version>1.0</version>
+    <version>1.01</version>
 
     <name>HTTPStatusMocker</name>
     <description>A little app for mock any HTTPRequest and returns any HTTP Status in response</description>
