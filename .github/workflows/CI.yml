@@ -58,5 +58,5 @@ jobs:
       # Publish image
       - name: Publish image
         env:
-          IMAGE_NAME: httpstatusmocker
-        run: docker push "docker.pkg.github.com/httpstatusmocker/${{ steps.global_env.outputs.IMAGE_NAME }}"
+          IMAGE_NAME: httpstatusmocker:latest
+        run: docker push "docker.pkg.github.com/alnat/httpstatusmocker/${{ steps.global_env.outputs.IMAGE_NAME }}"
