@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
  * Licensed by Apache License, Version 2.0
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("")
 public class AppController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
