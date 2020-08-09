@@ -17,13 +17,8 @@ public class AppController {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
 
-    @GetMapping("/")
+    @GetMapping(value = {"/", "/index"})
     public String main() {
-        return "index";
-    }
-
-    @GetMapping("/index")
-    public String index() {
         return "index";
     }
 

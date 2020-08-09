@@ -1,0 +1,26 @@
+*, *:after. *:before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.wrapper {
+    padding: 10px;
+    text-align: center;
+    font-family: "Roboto", monospace;
+    font-size: larger;
+    transition: .4s;
+}
+
+.content {
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.footer {
+    padding-top: 32px;
+    text-align: left;
+}
