@@ -14,6 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 /**
  * Created by @author AlNat on 09.08.2020.
@@ -50,6 +51,13 @@ public class AppControllerTest {
     void testDelay() throws Exception {
         mockMvc.perform(get("/200?delay=1"))
                 .andExpect(status().isOk());
+    }
+
+    @Test
+    @DisplayName("Test get main page")
+    void testMainPager() throws Exception {
+        mockMvc.perform(get("/"))
+                .andExpect(view().name("index"));
     }
 
 }
