@@ -7,6 +7,7 @@ on:
       - 'master'
 
 jobs:
+  # Build by Maven and check tests
   build:
     runs-on: ubuntu-latest
     steps:
@@ -19,4 +20,25 @@ jobs:
         java-version: 11
 
     - name: Build with Maven
-      run: mvn -B clean package --file pom.xml
+      run: mvn -B clean package --file pom.xml -DskipTests
+
+    - name: Maven Verify
+      run: mvn -B clean verify
+
+  # Publish on GitHub Maven Repo
+  publish_jar:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v1
+
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Publish artifact on GitHub Packages
+        run: mvn -B clean deploy -DskipTests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -71,4 +71,12 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>HTTP Status Mocker</name>
+            <url>https://maven.pkg.github.com/alnat/HTTPStatusMocker</url>
+        </repository>
+    </distributionManagement>
+
 </project>
