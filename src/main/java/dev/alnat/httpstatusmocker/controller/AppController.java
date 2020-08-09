@@ -22,6 +22,11 @@ public class AppController {
         return "index";
     }
 
+    @GetMapping("/index")
+    public String index() {
+        return "index";
+    }
+
     // Disable favicon
     @GetMapping("/favicon.ico")
     @ResponseBody
